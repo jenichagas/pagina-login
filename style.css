@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Roboto;
+}
+
+/* isso serve para que retiremos a margem padrao dos elementos de 8x8.  */
+
+body * {
+    box-sizing: border-box;
+}
+
+/* asterico é usado como REGRA no css, isso acima significa que oq for colocado aqui ira servir para todo o site */
+
+.main-login {
+width: 100vw;
+height: 100vh;
+background-color:#F89E91;
+display: flex;
+justify-content:center;
+align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column; 
+ 
+    /* este serve para que os itens que estão alinhados ao centros possam ficar em coluna, ex o nome login que esta acima. */
+}
+
+.left-login > h1 {
+    font-size:2em ;
+    color: #101434;
+
+   
+}
+
+.image-left {
+    width: 30vw;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.card-login {
+    width:60%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #C05A51;
+}
+
+.card-login > h1 {
+    color: #101434;
+    font-weight: 800;
+    margin: 0;
+    padding: 30px;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #F8EDF8;
+    color: #101434;
+    font-size: 12pt;
+    /* box-shadow: 0px 10px 40px #F89E91; */
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+.textfield > label { 
+    color:#101434;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color:#F89E91;
+    font-size: 10pt;
+}
+
+.button-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F89E91;
+    color: #101434;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+ /* esse abaixo é para que quando a tela for maior que 600px ele tenha o tamanho maior e nao fique um site pequeno. */ 
+@media only screen and (max-width: 950px) {.card-login { width: 85%;}
+}
+
+/* esse abaixo é para quando estivermos em uma tela de celular os itens se alinhem corretamente  */
+
+@media only screen and (max-width: 600px){.main-login { flex-direction: column;}
+
+.left-login h1 { display: none;}
+
+/* para fazer os itens do lado esquerdo e direito ocuparem toda a tela e nao ficarem centralizados */
+
+.left-login {
+    width: 100%;
+    height: auto;
+}
+
+.right-login {
+    width: 100%;
+    height: auto;
+}
+
+.left-login > image {
+    width: 50px;
+}
+}
